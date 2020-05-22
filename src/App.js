@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './App.css';
 
-function App() {
+  function App() {
               // declare the states here
               const [state,setState]=useState({
                 search: "",
                 country: []
               });
+
               //getSearch  by destructuring the state and fetching data 
                   const getSearch = (e)=>{
                     if (e.key === "Enter") {
@@ -36,7 +37,7 @@ function App() {
       <Navbar handleInput={handleInput} getSearch={getSearch}/>
           <div className="country">
               <div>
-                  <h1>{state.country.demonym}</h1>
+                  <h1>{ state.country.demonym === "" ? state.search  : state.country.demonym }</h1>
                   <h3>Population {state.country.population}</h3>
                   <p>Subregion : {state.country.subregion}</p>
                   <p>Capital : {state.country.capital}</p>

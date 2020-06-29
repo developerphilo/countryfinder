@@ -2,4 +2,4 @@
 
 
 
-`get to know about countries`
+`get to know about countries of the world
